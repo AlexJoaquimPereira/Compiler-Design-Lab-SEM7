@@ -1,5 +1,5 @@
 
-#line 3 "lex.yy.c"
+#line 2 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -441,8 +441,8 @@ char *yytext;
 #line 3 "c.l"
 #include <stdio.h>
 int line_number = 0;
+#line 444 "lex.yy.c"
 #line 445 "lex.yy.c"
-#line 446 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -661,8 +661,7 @@ YY_DECL
 	{
 #line 7 "c.l"
 
-
-#line 666 "lex.yy.c"
+#line 664 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -722,15 +721,15 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 9 "c.l"
+#line 8 "c.l"
 { printf("%5d %s", ++line_number, yytext); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 11 "c.l"
+#line 9 "c.l"
 ECHO;
 	YY_BREAK
-#line 734 "lex.yy.c"
+#line 732 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1735,7 +1734,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 11 "c.l"
+#line 9 "c.l"
 
 
 /* Take a filename as an argument */
@@ -1750,9 +1749,8 @@ int main(int argc, char *argv[]) {
     }
 
     yylex();
-    return 0;
 }
 
 int yywrap() {
-    return 1;
+    return 0;
 }
