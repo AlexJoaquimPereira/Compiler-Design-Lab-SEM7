@@ -1,5 +1,5 @@
 
-#line 3 "lex.yy.c"
+#line 2 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -441,8 +441,8 @@ char *yytext;
 #line 3 "b.l"
 #include <stdio.h>
 #include <stdlib.h>
+#line 444 "lex.yy.c"
 #line 445 "lex.yy.c"
-#line 446 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -661,7 +661,7 @@ YY_DECL
 	{
 #line 7 "b.l"
 
-#line 665 "lex.yy.c"
+#line 664 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -721,21 +721,20 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 8 "b.l"
-{  int value = atoi(yytext);
-            printf("Hexadecimal of %s is %X\n", yytext, atoi(yytext));}
+{printf("Hexadecimal of %s is %X\n", yytext, atoi(yytext));}
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 11 "b.l"
+#line 10 "b.l"
 { ECHO; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 13 "b.l"
+#line 12 "b.l"
 ECHO;
 	YY_BREAK
-#line 739 "lex.yy.c"
+#line 737 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1740,11 +1739,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 13 "b.l"
+#line 12 "b.l"
 
 
 int main() {
-    printf("Enter decimal numbers (press Ctrl+D when done):\n");
+    printf("Enter decimal numbers:\n");
     yylex();
 }
 
