@@ -19,20 +19,19 @@ int count = 0;
 
 %%
 
-/* Main function to run the lexer */
 int main() {
     printf("Enter numbers separated by spaces (CTRL+D to calc avg):\n");
     yylex();
-}
 
-
-int yywrap() {
     if (count > 0) {
-        printf("\n--------------------------------\n");
-        printf("Average of %d numbers is: %f\n", count, sum / count);
-        printf("--------------------------------\n");
+        printf("\nAverage of %d numbers is: %f\n", count, sum / count);
     } else {
         printf("\nNo numbers were entered.\n");
     }
+
     return 0;
+}
+
+int yywrap() {
+    return 1;
 }
