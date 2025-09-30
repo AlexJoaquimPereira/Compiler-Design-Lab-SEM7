@@ -1,5 +1,5 @@
 
-#line 3 "lex.yy.c"
+#line 2 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -449,8 +449,8 @@ char *yytext;
 
 double sum = 0;
 int count = 0;
+#line 452 "lex.yy.c"
 #line 453 "lex.yy.c"
-#line 454 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -669,7 +669,7 @@ YY_DECL
 	{
 #line 10 "d.l"
 
-#line 673 "lex.yy.c"
+#line 672 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -750,7 +750,7 @@ YY_RULE_SETUP
 #line 20 "d.l"
 ECHO;
 	YY_BREAK
-#line 754 "lex.yy.c"
+#line 753 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1758,20 +1758,19 @@ void yyfree (void * ptr )
 #line 20 "d.l"
 
 
-/* Main function to run the lexer */
 int main() {
-    printf("Enter numbers separated by spaces:\n");
+    printf("Enter numbers separated by spaces (CTRL+D to calc avg):\n");
     yylex();
-}
 
-
-int yywrap() {
     if (count > 0) {
-        printf("\n--------------------------------\n");
-        printf("Average of %d numbers is: %f\n", count, sum / count);
-        printf("--------------------------------\n");
+        printf("\nAverage of %d numbers is: %f\n", count, sum / count);
     } else {
         printf("\nNo numbers were entered.\n");
     }
+
     return 0;
+}
+
+int yywrap() {
+    return 1;
 }
