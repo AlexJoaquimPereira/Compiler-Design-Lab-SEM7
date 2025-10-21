@@ -1,4 +1,4 @@
-# This program computes the FIRST and FOLLOW sets for a given Context-Free Grammar.
+# This program computes the FIRST and FOLLOW sets for a given Context-Free Grammar
 # The grammar should be provided in a file named 'grammar.txt'.
 # Rules for the grammar:
 # - Use '->' to represent productions (e.g., S -> A B).
