@@ -1,0 +1,23 @@
+
+a = 10;
+
+for (i = 0; i < 10; i++) {
+b = 5;
+}
+
+for (x = 1; x <= 5; x++) {
+for (y = 1; y == 1; y++) {
+z = 100;
+}
+}
+
+for ( ; i < 20; ) {
+i = 0;
+}
+
+/*
+lex loop_validator.l
+yacc -d loop_validator.y
+gcc lex.yy.c y.tab.c -o loop_validator
+./loop_validator < test_loops.txt
+*/
