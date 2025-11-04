@@ -78,3 +78,8 @@ pip-wheel-metadata/
 # ======================
 *.pdf
 *.docx
+
+# Lex/YACC output files
+lex.yy.c
+y.tab.c
+y.tab.h
