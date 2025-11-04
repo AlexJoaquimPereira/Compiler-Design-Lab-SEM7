@@ -1,0 +1,9 @@
+a = 10;
+x = a + b * (c - d);
+
+while (i <= 100) {
+sum = sum + i;
+i = i + 1;
+}
+
+result = sum;
